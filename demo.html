@@ -1,0 +1,16 @@
+<head>
+  <script src="https://aframe.io/releases/1.0.2/aframe.min.js"></script>
+  <script src="https://raw.githack.com/jeromeetienne/AR.js/2.2.2/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+<a-scene id="scene" embedded vr-mode-ui="enabled: false">
+<a-assets>
+  <a-asset-item id="meter" src="./scifi_utility_pole/scene.gltf" color="grey"></a-asset-item>
+</a-assets>
+  <!--<a-plane scale="2 2 2" rotation="0 0 0" position="0 1 -6" material="src:#00marker"></a-plane>-->
+  <a-marker type="barcode" value="0">
+    <a-entity gltf-model="#meter" scale=".01 .01 .01" rotation="0 0 0" position="0 0 0"></a-entity>
+  </a-marker>
+  <a-entity camera></a-entity>
+</a-scene>
+</body>
